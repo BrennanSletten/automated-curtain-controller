@@ -3,8 +3,16 @@
 A full-stack IoT automation system built on Raspberry Pi 5 that automatically opens and closes curtains on a customizable weekly schedule. Controlled via a Progressive Web App accessible from an iPhone home screen.
 
 ## Demo
-
-https://github.com/brennansletten/automated-curtain-controller/raw/main/demo.mp4
+<table>
+  <tr>
+    <td align="center"><b>Opening</b></td>
+    <td align="center"><b>Closing</b></td>
+  </tr>
+  <tr>
+    <td><img src="https://raw.githubusercontent.com/brennansletten/automated-curtain-controller/main/demoOpen.gif" width="300"/></td>
+    <td><img src="https://raw.githubusercontent.com/brennansletten/automated-curtain-controller/main/demoClose.gif" width="300"/></td>
+  </tr>
+</table>
 
 ## Web App
 <img src="webapp.jpeg" width="300"/>
