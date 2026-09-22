@@ -10,8 +10,8 @@ https://github.com/brennansletten/automated-curtain-controller/raw/main/demo.mp4
 <img src="webapp.jpeg" width="300"/>
 
 ## Hardware
-![Hardware 1](hardware1.jpg)
-![Hardware 2](hardware2.jpg)
+<img src="hardware1.jpeg" width="300"/>
+<img src="hardware2.jpeg" width="300"/>
 
 ## Features
 - Weekly schedule with per-day open and close times
