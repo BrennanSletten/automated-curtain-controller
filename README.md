@@ -7,7 +7,7 @@ A full-stack IoT automation system built on Raspberry Pi 5 that automatically op
 https://github.com/brennansletten/automated-curtain-controller/raw/main/demo.mp4
 
 ## Web App
-![Web App](webapp.jpeg)
+<img src="webapp.png" width="300"/>
 
 ## Hardware
 ![Hardware 1](hardware1.jpg)
