@@ -10,7 +10,7 @@ A Raspberry Pi 5 project that automatically opens and closes curtains on a weekl
   </tr>
   <tr>
     <td><img src="https://raw.githubusercontent.com/brennansletten/automated-curtain-controller/main/demoOpen.gif" width="300"/></td>
-    <td><img src="https://raw.githubusercontent.com/brennanslewski/automated-curtain-controller/main/demoClose.gif" width="300"/></td>
+    <td><img src="https://raw.githubusercontent.com/brennansletten/automated-curtain-controller/main/demoClose.gif" width="300"/></td>
   </tr>
 </table>
 
