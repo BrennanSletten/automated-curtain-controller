@@ -10,8 +10,13 @@ https://github.com/brennansletten/automated-curtain-controller/raw/main/demo.mp4
 <img src="webapp.jpeg" width="300"/>
 
 ## Hardware
-<img src="https://raw.githubusercontent.com/brennansletten/automated-curtain-controller/main/hardware1.jpeg" width="300"/>
-<img src="https://raw.githubusercontent.com/brennansletten/automated-curtain-controller/main/hardware2.jpeg" width="300"/>
+## Hardware
+<table>
+  <tr>
+    <td><img src="https://raw.githubusercontent.com/brennansletten/automated-curtain-controller/main/hardware1.jpeg" width="300"/></td>
+    <td><img src="https://raw.githubusercontent.com/brennansletten/automated-curtain-controller/main/hardware2.jpeg" width="300"/></td>
+  </tr>
+</table>
 ## Features
 - Weekly schedule with per-day open and close times
 - Toggle individual days on or off
