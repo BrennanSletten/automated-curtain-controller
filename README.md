@@ -1,6 +1,6 @@
 # 🪟 Automated Curtain Controller
 
-A full-stack IoT automation system built on Raspberry Pi 5 that automatically opens and closes curtains on a customizable weekly schedule. Controlled via a Progressive Web App accessible from an iPhone home screen.
+A Raspberry Pi 5 project that automatically opens and closes curtains on a weekly schedule. Built with a Python/Flask backend and a dark mode web app you can install on your iPhone home screen.
 
 ## Demo
 <table>
@@ -10,14 +10,13 @@ A full-stack IoT automation system built on Raspberry Pi 5 that automatically op
   </tr>
   <tr>
     <td><img src="https://raw.githubusercontent.com/brennansletten/automated-curtain-controller/main/demoOpen.gif" width="300"/></td>
-    <td><img src="https://raw.githubusercontent.com/brennansletten/automated-curtain-controller/main/demoClose.gif" width="300"/></td>
+    <td><img src="https://raw.githubusercontent.com/brennanslewski/automated-curtain-controller/main/demoClose.gif" width="300"/></td>
   </tr>
 </table>
 
 ## Web App
-<img src="webapp.jpeg" width="300"/>
+<img src="https://raw.githubusercontent.com/brennansletten/automated-curtain-controller/main/webapp.jpeg" width="300"/>
 
-## Hardware
 ## Hardware
 <table>
   <tr>
@@ -25,28 +24,27 @@ A full-stack IoT automation system built on Raspberry Pi 5 that automatically op
     <td><img src="https://raw.githubusercontent.com/brennansletten/automated-curtain-controller/main/hardware2.jpeg" width="300"/></td>
   </tr>
 </table>
+
 ## Features
-- Weekly schedule with per-day open and close times
-- Toggle individual days on or off
-- Manual open/close control from iPhone home screen
-- Emergency stop button
-- Persistent curtain state saved across reboots
-- Auto-starts on boot via systemd service
-- Dark mode Progressive Web App — installable on iPhone home screen
+- Set different open and close times for each day of the week
+- Enable or disable individual days with a toggle
+- Manual open and close buttons from your phone
+- Emergency stop that kills the motor mid-movement
+- Remembers curtain position after a reboot
+- Starts automatically on boot — no SSH needed day to day
 
 ## Tech Stack
 - Python / Flask
-- Raspberry Pi 5 (headless Linux)
-- GPIO stepper motor control via gpiozero
-- GT2 belt and pulley mechanical drive system
-- Multithreaded motor control with emergency stop flag
-- JSON file-based persistent storage
-- Progressive Web App (PWA)
+- Raspberry Pi 5 running headless Linux
+- GPIO motor control via gpiozero
+- GT2 belt and pulley drive system
+- Multithreaded motor control
+- JSON for persistent storage
+- Progressive Web App
 
-## Hardware Components
+## Hardware
 - Raspberry Pi 5
-- 28BYJ-48 stepper motor
-- ULN2003 driver board
+- 28BYJ-48 stepper motor + ULN2003 driver board
 - GT2 timing belt and pulleys
 - 3D printed motor mount and idler bracket
 
@@ -62,13 +60,13 @@ A full-stack IoT automation system built on Raspberry Pi 5 that automatically op
 | GND | GND (Pin 6) |
 
 ## Setup
-1. Flash Raspberry Pi OS Lite (64-bit) to SD card using Raspberry Pi Imager
-2. Enable SSH and configure WiFi in Raspberry Pi Imager settings
-3. SSH into Pi and create project directory
-4. Set up Python virtual environment
+1. Flash Raspberry Pi OS Lite (64-bit) using Raspberry Pi Imager
+2. Enable SSH and set WiFi credentials in the imager settings
+3. SSH in and create the project folder
+4. Set up a Python virtual environment
 5. Install dependencies
-6. Configure systemd service for auto-boot on startup
-7. Access web interface at http://[pi-ip]:5000
+6. Set up the systemd service so it runs on boot
+7. Open http://[pi-ip]:5000 on your phone
 
 ## Dependencies
 ```bash
@@ -76,3 +74,20 @@ pip install flask gpiozero lgpio
 ```
 
 ## Project Structure
+```
+curtainproject/
+├── app.py              # Flask backend, motor control, scheduler
+├── schedule.json       # Weekly schedule
+├── state.json          # Saved curtain position
+└── templates/
+    └── index.html      # Web app frontend
+```
+
+## How It Works
+Flask runs as a systemd service and hosts the web interface on port 5000. A background thread checks the time every 60 seconds and triggers the motor if it matches the schedule. The motor runs on its own thread so the web app stays responsive while it's moving. After every open or close the curtain position gets saved to a file so it survives reboots.
+
+## Credits
+3D printed parts based on the Curtains Opener by daliudzius
+https://www.printables.com/model/462278-curtains-opener
+
+Adapted for a different window size and swapped the ESP8266 for a Raspberry Pi 5.
