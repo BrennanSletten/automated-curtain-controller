@@ -1,0 +1,8 @@
+# Local state
+state.json
+
+# Python caches and environments
+__pycache__/
+*.py[cod]
+venv/
+env/
