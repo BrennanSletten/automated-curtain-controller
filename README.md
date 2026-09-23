@@ -9,19 +9,19 @@ A Raspberry Pi 5 project that automatically opens and closes curtains on a weekl
     <td align="center"><b>Closing</b></td>
   </tr>
   <tr>
-    <td><img src="https://raw.githubusercontent.com/brennansletten/automated-curtain-controller/main/demoOpen.gif" width="300"/></td>
-    <td><img src="https://raw.githubusercontent.com/brennansletten/automated-curtain-controller/main/demoClose.gif" width="300"/></td>
+    <td><img src="docs/demoOpen.gif" width="300"/></td>
+    <td><img src="docs/demoClose.gif" width="300"/></td>
   </tr>
 </table>
 
 ## Web App
-<img src="https://raw.githubusercontent.com/brennansletten/automated-curtain-controller/main/webapp.jpeg" width="300"/>
+<img src="docs/webapp.jpeg" width="300"/>
 
 ## Hardware
 <table>
   <tr>
-    <td><img src="https://raw.githubusercontent.com/brennansletten/automated-curtain-controller/main/hardware1.jpeg" width="300"/></td>
-    <td><img src="https://raw.githubusercontent.com/brennansletten/automated-curtain-controller/main/hardware2.jpeg" width="300"/></td>
+    <td><img src="docs/hardware1.jpeg" width="300"/></td>
+    <td><img src="docs/hardware2.jpeg" width="300"/></td>
   </tr>
 </table>
 
